@@ -1,6 +1,6 @@
 import grafo
 
-file = open("grafo5.txt", "r")
+file = open("grafo4.txt", "r")
 texto = file.readlines()
 file.close()
 
@@ -10,6 +10,7 @@ chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '
          "3", "4", "5", "6", "7", "8", "9", "0"]
 
 grafo = grafo.Grafo()
+num_arestas = 0
 
 for i in range(len(vert_txt)):
   vert1_txt = ""
@@ -48,18 +49,15 @@ for i in range(len(vert_txt)):
           leu_vertices = True
     
     if leu_vertices:
-      arestas = [vert1_txt, vert2_txt]
-      grafo.add_aresta(arestas)
+      if vert1_txt != "" and vert2_txt != "":
+        num_arestas += 1
+        arestas = [vert1_txt, vert2_txt]
+        grafo.add_aresta(arestas)
       break
     
 vertices = grafo.todos_vertices()
 
 print(f"Número de vértices: {len(vertices)}")
-
-num_arestas = 0
-for i in vert_txt:
-  if len(i) > 2:
-    num_arestas += 1
 
 print(f"Número de arestas: {num_arestas}")
 

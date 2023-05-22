@@ -27,11 +27,9 @@ class Grafo(object):
             for x, y in [(vertice1, vertice2), (vertice2, vertice1)]:
                 if x in self._grafo_dict:
                     if y not in self._grafo_dict[x]:
-                        if y != "":
-                            self._grafo_dict[x].append(y)
+                        self._grafo_dict[x].append(y)
                 else:
-                    if y != "":
-                        self._grafo_dict[x] = [y]
+                    self._grafo_dict[x] = [y]
         
     def addAresta(self, arestas):
         self.arestas.append(arestas) 
