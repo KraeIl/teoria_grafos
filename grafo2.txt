@@ -1,0 +1,9 @@
+8
+s y
+s u
+y w
+u w
+z t
+z x
+x v
+t v
