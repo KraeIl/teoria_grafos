@@ -53,11 +53,12 @@ for i in range(len(vert_txt)):
         num_arestas += 1
         arestas = [vert1_txt, vert2_txt]
         grafo.add_aresta(arestas)
+      
       break
     
 vertices = grafo.todos_vertices()
 
-print(f"Número de vértices: {len(vertices)}")
+print(f"\nNúmero de vértices: {len(vertices)}")
 
 print(f"Número de arestas: {num_arestas}")
 

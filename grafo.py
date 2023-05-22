@@ -12,7 +12,7 @@ class Grafo(object):
     def todas_arestas(self):
         msg = ""
         for vert in self._grafo_dict:
-            msg += "Vértice: " + str(vert) + " arestas: " + str(self._grafo_dict[vert]) + "\n"
+            msg += "Vértice: " + str(vert) + ", arestas: " + str(self._grafo_dict[vert]) + "\n"
             
         return msg
     
